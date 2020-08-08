@@ -23,22 +23,22 @@ function generatePassword() {
 
   // Validate the Password length 
   while (isNaN(parseInt(passwordLength)) || parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128) {
-    passwordLength = prompt("password length needs to be 8-128 characters")
+    passwordLength = prompt("Please enter the number of characters you would like in the password it must  be between 8-128 characters")
   }
   // running boolion to get what characters needed 
 
-  var lowerLet = confirm("Will you need lower case letters in your password?")
-  var upperLet = confirm("Will you need upper case letters in your password?")
-  var passNumber = confirm("Will your password need any numbers?")
-  var specialSym = confirm("Will your password need any symbols in it")
+  var lowerLet = confirm("Will you need lower case letters in your password? Ok for yes cancel for no")
+  var upperLet = confirm("Will you need upper case letters in your password? Ok for yes cancel for no")
+  var passNumber = confirm("Will your password need any numbers? Ok for yes cancel for no")
+  var specialSym = confirm("Will your password need any symbols in it Ok for yes cancel for no")
 
 
   // remember we need the questions to reppet if all are no !!!! means know
   while (!lowerLet && !upperLet && !passNumber && !specialSym) {
-    lowerLet = confirm("Will you need lower case letters in your password?")
-    upperLet = confirm("Will you need upper case letters in your password?")
-    passNumber = confirm("Will your password need any numbers?")
-    specialSym = confirm("Will your password need any symbols in it")
+    lowerLet = confirm("Will you need lower case letters in your password? Ok for yes cancel for no")
+    upperLet = confirm("Will you need upper case letters in your password? Ok for yes cancel for no")
+    passNumber = confirm("Will your password need any numbers? Ok for yes cancel for no")
+    specialSym = confirm("Will your password need any symbols in it Ok for yes cancel for no")
   }
 
   // create character sets
@@ -66,7 +66,7 @@ function generatePassword() {
     // console.log(specialSym)
   }
 
-var randomPass ="";
+  var randomPass = "";
 
 
 
