@@ -2,68 +2,83 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 }
+
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
+  results = "";
 
-}
-var passwordLength = "";
- 
+  var passwordLength = "";
+  console.log(generatePassword)
 
-// Validate the Password length 
-while (isNaN(parseInt(passwordLength)) || parseInt(passwordLength) < 8 || parseInt(passwordLength) >128) {
-  passwordLength = prompt ("password length needs to be 8-128 characters")
-}
-// running boolion to get what characters needed 
+  // Validate the Password length 
+  while (isNaN(parseInt(passwordLength)) || parseInt(passwordLength) < 8 || parseInt(passwordLength) > 128) {
+    passwordLength = prompt("password length needs to be 8-128 characters")
+  }
+  // running boolion to get what characters needed 
 
-var lowerLet = confirm ("Will you need lower case letters in your password?")
-var upperLet = confirm ("Will you need upper case letters in your password?")
-var passNumber = confirm ("Will your password need any numbers?")
-var specialSym = confirm ("Will your password need any symbols in it")
+  var lowerLet = confirm("Will you need lower case letters in your password?")
+  var upperLet = confirm("Will you need upper case letters in your password?")
+  var passNumber = confirm("Will your password need any numbers?")
+  var specialSym = confirm("Will your password need any symbols in it")
 
 
-// remember we need the questions to reppet if all are no !!!! means know
-while (!lowerLet || !upperLet || !passNumber || !specialSym) {
-  lowerLet = confirm ("Will you need lower case letters in your password?")
-  upperLet = confirm ("Will you need upper case letters in your password?")
-  passNumber = confirm ("Will your password need any numbers?")
-  specialSym = confirm ("Will your password need any symbols in it")
-}
+  // remember we need the questions to reppet if all are no !!!! means know
+  while (!lowerLet && !upperLet && !passNumber && !specialSym) {
+    lowerLet = confirm("Will you need lower case letters in your password?")
+    upperLet = confirm("Will you need upper case letters in your password?")
+    passNumber = confirm("Will your password need any numbers?")
+    specialSym = confirm("Will your password need any symbols in it")
+  }
 
-// create character sets
-var char = "";
-
-if (lowerLet){
-  var lowerChar = "abcdefghijklmnopqrstuvwxyz";
-  char += lowerChar
-}
-if (upperLet){
+  // create character sets
+  var char = "";
   var upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  char += upperChar
-}
-if (passNumber){
-  var numberChar = "0123456789";
-  char += numberChar
-}
-if (specialSym){
   var specChar = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-  char  += specChar
-}
-console.log (char.length)
-//  Add event listener to generate button
-   generateBtn.addEventListener("click", writePassword);
+  var lowerChar = "abcdefghijklmnopqrstuvwxyz";
+  var numberChar = "0123456789";
+  // "abcdefghijklmnopqrstuvwxyz" was attempting to use an array over a string has not made a diffrence ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  if (lowerLet) {
+    char += lowerChar
+    // console.log(lowerLet)
 
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+  }
+  if (upperLet) {
+    char += upperChar
+    // console.log(upperChar)
+  }
+  if (passNumber) {
+    char += numberChar
+    // console.log(numberChar)
+  }
+  if (specialSym) {
+    char += specChar
+    // console.log(specialSym)
+  }
+
+var randomPass ="";
+
+
+
+  for (var i = 0; i < passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * char.length)
+    randomPass += char[randomNumber]
+  } return (randomPass)
+}
+
+
+
+
+
 
 
