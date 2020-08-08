@@ -1,20 +1,25 @@
-Day One Notes
-
+Notes
+Link to Password Genorator: https://cloggedbat.github.io/03-JavaScript-Password-Generator/
         Goal:
             **- find a starting point, this is not like the bootstrap work
             **- String are needed, so i am working with those now
             **- What would be the best way ro have our's set up
                 *- We will start with the alerts but may want to move on and chang the css to be better used
 
+Ok so madness ensude on this howework, I ended up tryed a few ways. In my first attempt, and that  was a miserable attempt I flowndered in even figuring out how to start. Soo i focused on what I know needed to work and that was the button. So I fought and fought and fought untill finly i got it to work. It did not have any vars to pull from but a prompt would show itself. Then on the advise of a fellow student ran down a rabbit whole that is the char codes. This didnt not help me other then make me more confused and angry.
 
-                Working with the code we need
-                    Click 
-                    Prompt
-                    generate
-                    prompt
-                    generate
-                    prompt
-        I think they are all 
+Soooooo I deleted the JS code grabbed a new copy of the given code and started again, I lost functionality of the button for a day (that was great). After a day of looking at if/else statements, i started agian, this time i was able to get the prompt to somtimes pop up on the click. and run though... and then my spigetti code cracked and fell apart. 
+
+Then i restarted again for the 3rd time with my study group and the golden ticket was the "While loop", that was a game changer, getting the propts being responsive over just being prompts was helped get me in the right direction. 
+
+    Working with the code we need
+    Click 
+    Prompt
+    generate
+    prompt
+    generate
+    prompt
+    I think they are all 
 
 
 
